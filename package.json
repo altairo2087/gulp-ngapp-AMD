@@ -52,11 +52,6 @@
     "gulp-autoprefixer": "*",
     "es6-promise": "*",
     "gulp-imagemin": "*",
-    "imagemin-pngquant": "*",
-
-    "grunt-cli":"*",
-    "yo":"*",
-    "generator-karma-require":"*",
-    "generator-angular-require":"*"
+    "imagemin-pngquant": "*"
   }
 }

@@ -1,7 +1,6 @@
 {
   "name": "ngapp",
   "description": "",
-  "main": "server.js",
   "authors": [
     "ruslan <altairo2087@gmail.com>"
   ],
