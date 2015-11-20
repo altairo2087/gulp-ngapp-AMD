@@ -11,7 +11,8 @@
     "build": "gulp build",
     "build:dev": "gulp build --env dev",
     "build:prod": "gulp build --env prod",
-    "list": "gulp default"
+    "list": "gulp default",
+    "bower:update": "bower update"
   },
   "repository": {
     "type": "git",
