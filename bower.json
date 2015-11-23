@@ -42,8 +42,7 @@
     "remarkable-bootstrap-notify": "*",
     "requirejs": "*",
     "requirejs-plugins": "*",
-    "requirejs-domready": "*",
-    "oclazyload": "*"
+    "angularAMD":"*"
   },
   "devDependencies": {
     "angular-mocks": "*"

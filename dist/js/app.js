@@ -1,3 +1,5 @@
-/**
- * Created by rgazizov on 20.11.2015.
- */
+define(['angularAMD'], function (angularAMD) {
+    var app = angular.module(app_name, ['webapp']);
+
+    return angularAMD.bootstrap(app);
+});
