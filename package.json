@@ -24,6 +24,7 @@
     "url": "https://github.com/altairo2087/ngapp/issues"
   },
   "devDependencies": {
+    "requirejs": "*",
     "gulp": "*",
     "gulp-csso": "*",
     "gulp-concat": "*",

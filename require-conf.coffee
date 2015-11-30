@@ -1,5 +1,6 @@
 fs = require 'fs'
 path = require 'path'
+rjs = require 'requirejs'
 
 srcpath = './dist/js'
 
@@ -71,5 +72,25 @@ getModules = ->
         catch error
   result
 
+getMainFiles = ->
+  result = []
+  files = fs.readdirSync srcpath
+  for file in files
+    do (file) ->
+      if (fs.statSync path.join srcpath, file).isFile()
+        if file.indexOf('.js') isnt -1
+          result.push './dist/js/' + file
+  result
+
+optimize = ->
+  rjs.optimize
+    baseUrl: "./dist/js"
+#    dir: './public/js'
+    out: './public/js/bootstrap.min.js'
+    optimize: 'none'
+    name: "bootstrap"
+
+
 module.exports = (env, options) ->
-  console.log getModules()
+#  console.log getMainFiles()
+  optimize()
