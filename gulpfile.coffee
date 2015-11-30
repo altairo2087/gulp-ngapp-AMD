@@ -2,6 +2,7 @@
 # подключение плагинов
 gulp = require 'gulp'
 Q = require 'q'
+generateRequireConfig = require './require-conf'
 plugins = (require 'gulp-load-plugins')
   pattern: ['gulp-*', 'gulp.*', 'del', 'main-bower-files','imagemin-pngquant']
   replaceString: /\bgulp[\-.]/
@@ -283,6 +284,9 @@ tasks =
   build:
     desc: "build app: '--env [prod|dev]' default 'dev'"
     action: build
+  require:
+    desc: ''
+    action: generateRequireConfig
   default:
     desc: "show tasks list"
     action: ->
