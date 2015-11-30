@@ -82,15 +82,18 @@ getMainFiles = ->
           result.push './dist/js/' + file
   result
 
-optimize = ->
+optimizeMain = ->
   rjs.optimize
     baseUrl: "./dist/js"
-#    dir: './public/js'
-    out: './public/js/bootstrap.min.js'
+    out: './public/js/bootstrap.js'
     optimize: 'none'
     name: "bootstrap"
+    wrap: {
+      start: "(function() {\n'use strict';\n",
+      end: "}());"
+    }
 
 
 module.exports = (env, options) ->
 #  console.log getMainFiles()
-  optimize()
+  optimizeMain()
